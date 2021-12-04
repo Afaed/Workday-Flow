@@ -32,20 +32,19 @@
       <main>
         <div class="container">
           <div class="row">
-            <div class="col-2 border border-dark">
-              <p>1/3 Timeblocks here</p>
+            <div class="col-2 border border-dark" id="hour">
+              <p>9PM</p>
           
             </div>
             <div class="col-8 border border-primary">
-              <form name="text">
-                <textarea name="list-group" id="card" cols="30" rows="10">
-                </textarea>
-              </form>
-            
+              <div id="to-do">
+                <form name="text">
+                  <textarea name="list-group" id="card" cols="20" rows="10"></textarea>
+                </form>
+              </div>
             </div>
-            <div class="col-2 border border-success">
+            <div class="col-2 border border-success saveBtn"> <button id="saveBtn"><input type="button" onCLick="save();" value="Save"></input></button>
               <p>3/3 save button here</p>
-              <button id="saveBtn"><input type="button" onCLick="save();" value="Save"></input></button>
             </div>
           </div>
         </div>

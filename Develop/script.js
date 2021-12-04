@@ -1,6 +1,28 @@
-var date = document.getElementById("currentDay");
 var timeContainer = document.getElementsByClassName("timeblocks");
-var currentDate = new Date();
+
+function date (date) {
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+document.getElementById("currentDay").innerHTML = "date"
+return date
+}
+
+function present() {
+  if (moment().isAfter(time)) {
+    $(taskEl).addClass("list-group-item-danger");
+  } 
+  else if (Math.abs(moment().diff(time, "days")) <= 2) {
+    $(taskEl).addClass("list-group-item-warning");
+  
+  } else (days)
+
+}
+if (moment().isAfter(time)) {
+  $(taskEl).addClass("list-group-item-danger");
+} 
+else if (Math.abs(moment().diff(time, "days")) <= 2) {
+  $(taskEl).addClass("list-group-item-warning");
+}
 
 $("div").click(function () {
   var prev = $(this).html();
@@ -11,6 +33,7 @@ for(i = 0; i<=div.length; i++)
 
 ;});
 
+console.log(tempArr);
 $(".card .list-group").sortable({
   connectWith: $(".card .list-group"),
   scroll: false,
