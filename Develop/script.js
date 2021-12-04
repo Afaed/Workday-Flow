@@ -1,10 +1,15 @@
 var timeContainer = document.getElementsByClassName("timeblocks");
+date = document.getElementById("#currentDay").innerHTML
+function date () {
+  var now = moment();
 
-function date (date) {
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-document.getElementById("currentDay").innerHTML = "date"
-return date
+  $('time').each(function(i, e) {
+      var time = moment($(e).attr('datetime'));
+  
+      if(now.diff(time, 'days') <= 1) {
+          $(e).html('<span>' + time.from(now) + '</span>');
+      }
+  });
 }
 
 function present() {
@@ -66,7 +71,7 @@ $(".slot").click({
   }
   }
 );};
-
+const col= getElementById(".col")
 for (let i = 0; i < 20; i++){
 $(".timeBlocks")(`   <div class="col-2 border border-dark">
 <p>1/3 Timeblocks here</p>
