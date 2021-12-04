@@ -20,7 +20,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
-    <button id="saveBtn" class="saveBtn" data toggle="Modal">Save Button</button>
   </head>
 
   <body>
@@ -31,27 +30,36 @@
     </header>
       <!-- Timeblocks go here -->
       <main>
-        <div class= "containter col-12 col-lg-3 d-flex flex-column">
-              <div class="row">
-                <div class="col-3 align-center" class="card" >
-                  <h2>Column </h2>
-                </div>
-                <div class="col-3 align-center"><h2>Dolumn</h2></div>
-                <div class="col-3 align-center"><h2>Column</h2></div>
-              </div>
-              <div class="form-group">
-                <label for="modalTaskDescription">Task description</label>
-                <textarea id="modalTaskDescription" rows="3" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="modalDueDate">Due date</label>
-                <input type="text" class="form-control" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
-              </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <p>One of three columns</p>
+              <div class="col"><p>Column</p></div>
+              <div class="col"><p>Column</p></div>
+              <div class="w-100"></div>
+              <div class="col"><p>Column</p></div>
+              <div class="col"><p>Column</p></div>
             </div>
+            <div class="col-6">
+              <p>One of three columns</p>
+              <div class="col"><p>Column</p></div>
+              <div class="col"><p>Column</p></div>
+              <div class="w-100"></div>
+              <div class="col"><p>Column</p></div>
+              <div class="col"><p>Column</p></div>
+            </div>
+            <div class="col-sm">
+              <p>One of three columns</p>
+              <div class="col"><p>Column</p></div>
+              <div class="col"><p>Column</p></div>
+              <div class="w-100"></div>
+              <div class="col"><p>Column</p></div>
+              <div class="col"><p>Column</p></div>
+            </div>
+          </div>
         </div>
           <!-- todo start -->
   </main>
-</div>
 
 <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
     aria-hidden="true">
@@ -66,7 +74,9 @@
 <div class="modal">
 
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
