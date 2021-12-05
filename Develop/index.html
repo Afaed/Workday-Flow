@@ -1,73 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-      <!-- Timeblocks go here -->
-      <main>
-        <div class="container">
-          <div class="row" id = "col1">
-            <div class="col-2 border border-dark" id="hour">
-              <p>9PM</p>
-          
-            </div>
-            <div class="col-8 border border-primary">
-              <div id="to-do">
-                <form name="text">
-                  <textarea name="list-group" id="card" cols="20" rows="10"></textarea>
-                </form>
-              </div>
-            </div>
-            <div class="col-2 border border-success saveBtn"> <button id="saveBtn"><input type="button" onCLick="save();" value="Save"></input></button>
-              <p>3/3 save button here</p>
-            </div>
-          </div>
-        </div>
-          <!-- todo start -->
-  </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Work Day Scheduler</title>
+</head>
 
-<div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="task-form-modal">Add New Task</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class>
+    <!-- Timeblocks go here -->
+    <table class="container">
+      <tr class="row border border-special">
+        <td class="hour col border-special">9am</td>
+        <td class="time-block col" id="9">          <!-- all of my textareas are called btn which is ironic because they arent btns -->
+          <textarea id="btn9">
+          </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="9">
+            save
           </button>
-        </div>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">10am</td>
+        <td class="time-block col" id="10">
+          <textarea id="btn10">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="10">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">11am</td>
+        <td class="time-block col" id="11">
+          <textarea id="btn11">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="11">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">12pm</td>
+        <td class="time-block col" id="12">
+          <textarea id="btn12">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="12">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">1pm</td>
+        <td class="time-block col" id="13">
+          <textarea id="btn13">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="13">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">2pm</td>
+        <td class="time-block col" id="14">
+          <textarea id="btn14">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="14">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">3pm</td>
+        <td class="time-block col" id="15">
+          <textarea id="btn15">
+          </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="15">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">4pm</td>
+        <td class="time-block col" id="16">
+          <textarea id="btn16">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="16">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col order-special">5pm</td>
+        <td class="time-block col" id="17">
+          <textarea id="btn17">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="17">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">6pm</td>
+        <td class="time-block col" id="18">
+          <textarea id="btn18">
+            </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn border-special" value="18">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">9pm</td>
+        <td class="time-block col" id="15">
+          <textarea id="btn15">
+          </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="15">
+            save
+          </button>
+        </td>
+      </tr>
+      <tr class="row border border-special">
+        <td class="hour col border-special">10pm</td>
+        <td class="time-block col" id="15">
+          <textarea id="btn15">
+          </textarea>
+        </td>
+        <td class="col">
+          <button class="saveBtn" value="15">
+            save
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="./script.js"></script>
-  </body>
+  <!-- I didnt actually use jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
