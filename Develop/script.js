@@ -1,33 +1,8 @@
 var timeContainer = document.getElementsByClassName("timeblocks");
-date = document.getElementById("#currentDay").innerHTML
-function date () {
-  var now = moment();
 
-  $('time').each(function(i, e) {
-      var time = moment($(e).attr('datetime'));
-  
-      if(now.diff(time, 'days') <= 1) {
-          $(e).html('<span>' + time.from(now) + '</span>');
-      }
-  });
-}
-
-function present() {
-  if (moment().isAfter(time)) {
-    $(taskEl).addClass("list-group-item-danger");
-  } 
-  else if (Math.abs(moment().diff(time, "days")) <= 2) {
-    $(taskEl).addClass("list-group-item-warning");
-  
-  } else (days)
-
-}
-if (moment().isAfter(time)) {
-  $(taskEl).addClass("list-group-item-danger");
-} 
-else if (Math.abs(moment().diff(time, "days")) <= 2) {
-  $(taskEl).addClass("list-group-item-warning");
-}
+var today = document.querySelector("#currentDay");
+var currentTime = moment();
+today.textContent = currentTime.format("dd, MMM YYYY");
 
 $("div").click(function () {
   var prev = $(this).html();
@@ -60,17 +35,28 @@ $(".card .list-group").sortable({
     console.log("update", this);
   }
 });
-for (let i = 0; i < 10; i++){
-$(".slot").click({
-  connectWith: $(".slot"),
-  scroll: false,
-  tolerance: "pointer",
-  helper: "clone",
-  activate: function (event) {
-    console.log("activate", this);
-  }
-  }
-);};
+let columnsNames = ["col1", "col2", "col3", "col4"];
+let rows = [
+["col1val1", "09", "26", "1"],
+["col1val2", "08", "59", "1"],
+["col1val3", "09", "22", "1"]
+];
+
+
+var _rows = [];
+var rlen = rows.length;
+var clen = columnsNames.length;
+for(var i=0;i<rlen;i++){
+    var _row = {};
+    for(var c=0;c<clen;c++){
+        _row[columnsNames[c]] = rows[i][c];
+    }
+    _rows.push(_row);
+}
+
+console.log(_rows);
+
+var col = document.createElement("div");
 const col= getElementById(".col")
 for (let i = 0; i < 20; i++){
 $(".timeBlocks")(`   <div class="col-2 border border-dark">
