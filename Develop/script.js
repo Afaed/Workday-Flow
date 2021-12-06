@@ -9,12 +9,11 @@ var displayDate = currentTime.format('MMMM Do YYYY');
 currentDayEl.innerText = displayDate
 
 var timeBlockEl = document.querySelectorAll(".time-block");
-console.log(timeBlockEl)
 
 var checkTime = function (currentEl) {
-    var timeBlock = moment().hour(parseInt(currentEl.id))
+    var timeBlock = moment().hour(parseInt(currentEl.id.replace("text", "")))
     console.log(timeBlock)
-    console.log(currentTime.hour())
+    
     if (timeBlock.hour() < currentTime.hour()) {
         return "past"
     }
@@ -23,36 +22,34 @@ var checkTime = function (currentEl) {
     }
     if (timeBlock.hour() === currentTime.hour()) {
         return "present"
-    }}
-// initial   refers to true to loop      then continue
-for (var i = 0; i <= timeBlockEl.length - 1; i++) 
+    }
+}
 
-{
-    console.log(i)
+for (i = 0; i <= timeBlockEl.length - 1; i++) {
     timeBlockEl[i].className = timeBlockEl[i].className + " " + checkTime(timeBlockEl[i])
 }
 
 
 var onSave = function (event) {
 
-        var hourofday = event.target.value
-        var textfieldfortime = document.querySelector(`#btn${hourofday}`).value
-        if (textfieldfortime) {
-            localStorage.setItem(`${hourofday}`, textfieldfortime.trim())
-        }
+    var hourOfDay = event.target.value
+    var contentOfTextFieldForTimeSlot = document.querySelector(`#text${hourOfDay}`).value.trim()
+    
+    console.log(hourOfDay)
+    localStorage.setItem(hourOfDay, contentOfTextFieldForTimeSlot)
 }
 
 $(".saveBtn").click(onSave)
 
-var eventArray = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+var eventArray = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
-//in this project, we have tools to make sure they don't lose their info. The purpose of localstarge is to make sure we don't lose it. Thanks save button.
+
 
 for (var key of eventArray) {
 
     var eventText = localStorage.getItem(`${key}`)
     if (eventText) {
-        $(`#btn${key}`).val(eventText)
+        $(`#text${key}`).val(eventText)
     }
 
 }

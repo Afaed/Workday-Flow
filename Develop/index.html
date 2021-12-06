@@ -19,130 +19,79 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class>
-    <!-- Timeblocks go here -->
-    <table class="container">
-      <tr class="row border border-special">
-        <td class="hour col border-special">9am</td>
-        <td class="time-block col" id="9">          <!-- all of my textareas are called btn which is ironic because they arent btns -->
-          <textarea id="btn9">
-          </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="9">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">10am</td>
-        <td class="time-block col" id="10">
-          <textarea id="btn10">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="10">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">11am</td>
-        <td class="time-block col" id="11">
-          <textarea id="btn11">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="11">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">12pm</td>
-        <td class="time-block col" id="12">
-          <textarea id="btn12">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="12">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">1pm</td>
-        <td class="time-block col" id="13">
-          <textarea id="btn13">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="13">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">2pm</td>
-        <td class="time-block col" id="14">
-          <textarea id="btn14">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="14">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">3pm</td>
-        <td class="time-block col" id="15">
-          <textarea id="btn15">
-          </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="15">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">4pm</td>
-        <td class="time-block col" id="16">
-          <textarea id="btn16">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="16">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col order-special">5pm</td>
-        <td class="time-block col" id="17">
-          <textarea id="btn17">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn" value="17">
-            save
-          </button>
-        </td>
-      </tr>
-      <tr class="row border border-special">
-        <td class="hour col border-special">6pm</td>
-        <td class="time-block col" id="18">
-          <textarea id="btn18">
-            </textarea>
-        </td>
-        <td class="col">
-          <button class="saveBtn border-special" value="18">
-            save
-          </button>
-        </td>
-      </tr>
-    </table>
+  <div class="container">
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">9am</div>
+        <textarea class="time-block col-10" id="text9">
+        </textarea>
+        <button class="saveBtn col-1" value="9">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">10am</div>
+        <textarea class="time-block col-10" id="text10">
+        </textarea>
+        <button class="saveBtn col-1" value="10">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">11am</div>
+        <textarea class="time-block col-10" id="text11">
+        </textarea>
+        <button class="saveBtn col-1" value="11">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">12pm</div>
+        <textarea class="time-block col-10" id="text12">
+        </textarea>
+        <button class="saveBtn col-1" value="12">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">1pm</div>
+        <textarea class="time-block col-10" id="text13">
+        </textarea>
+        <button class="saveBtn col-1" value="13">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">2pm</div>
+        <textarea class="time-block col-10" id="text14">
+        </textarea>
+        <button class="saveBtn col-1" value="14">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">3pm</div>
+        <textarea class="time-block col-10" id="text15">
+        </textarea>
+        <button class="saveBtn col-1" value="15">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">4pm</div>
+        <textarea class="time-block col-10" id="text16">
+        </textarea>
+        <button class="saveBtn col-1" value="16">
+          save
+        </button>
+      </div>
+      <div class="row border border-special">
+        <div class="hour col-1 border-special">5pm</div>
+        <textarea class="time-block col-10" id="text17">
+        </textarea>
+        <button class="saveBtn col-1" value="17">
+          save
+        </button>
+      </div>
   </div>
 
   <!-- I didnt actually use jquery -->
