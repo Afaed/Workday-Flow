@@ -9,14 +9,10 @@ I did get help from Naomi who shared me her code to see what I didn't do correct
 
 Some images of development!
 
-<img src ="issue.png"
-alt = "Big issue"
-style = "float: left; margin-right: 10px;" />
+! [issue] (issue.png)
 
 This one was when I was trying to get the everything to work, but as it turns out what i needed to do was have them under spereate tables and columns tags.
 
-<img src ="failed attempt.png"
-alt = "closer!"
-style = "float: left; margin-right: 10px;" />
+! [closer!] (failed attempt.png)
 
 This one is when I tried to fix the Jquery after asking in Slack on how do I fix my corrupted Jquery libaries before deciding to axe the idea entirely after spending several days trying to get Moment to work. This one I fixed by as stated before, deleting the bad files on the HTML doc.
